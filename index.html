@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HM Store</title>
+  <!-- Menggunakan Tailwind CSS untuk responsivitas maksimal -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Google Fonts untuk font yang clean dan premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    /* Efek tombol putih cembung 3D (Lebih soft dan nyaman di mata) */
+    .btn-cembung {
+      background: #ffffff;
+      box-shadow: 
+        0px 12px 24px rgba(0, 0, 0, 0.18), 
+        inset 0px -6px 12px rgba(0, 0, 0, 0.12), 
+        inset 0px 6px 12px rgba(255, 255, 255, 0.9);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    /* Efek klik/tekan (menjadi cekung) */
+    .btn-cembung:active {
+      transform: scale(0.95);
+      box-shadow: 
+        0px 4px 8px rgba(0, 0, 0, 0.12), 
+        inset 0px 4px 8px rgba(0, 0, 0, 0.18), 
+        inset 0px -4px 8px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Animasi muncul lembut di tengah layar */
+    .fade-in-center {
+      animation: scaleUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes scaleUp {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body class="w-full h-screen overflow-hidden m-0 p-0 flex items-center justify-center bg-cover bg-center bg-no-repeat select-none" 
+      style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://i.imgur.com/Oftxlsr.jpeg');">
+
+  <!-- Container Utama (Otomatis Center di Desktop & Mobile) -->
+  <div class="flex items-center justify-center w-full h-full px-6 fade-in-center">
+    
+    <!-- Tombol Mulai Belanja Cembung Murni Tanpa Panah -->
+    <a href="https://script.google.com/macros/s/AKfycbwjAuDKXnERo_Q7i81DN8CR4H8w7IZUGh2sUzl1d4yl8Zp-CWdMtLQbdwahEYKA8L_VKQ/exec" 
+       class="btn-cembung inline-flex items-center justify-center text-center rounded-full text-blue-950 font-extrabold tracking-wider hover:scale-105 active:scale-95 transition-all duration-300
+              /* Ukuran dinamis: Lebar & tinggi otomatis membesar di desktop, pas di mobile */
+              w-64 py-4 text-lg 
+              md:w-80 md:py-5 md:text-xl">
+      Mulai Belanja
+    </a>
+
+  </div>
+
+</body>
+</html>
